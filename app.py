@@ -25,7 +25,7 @@ def generate_course(topic, search_results):
         "Create an engaging and informative course outline based on the provided topic and search results.",
         "The course should be structured like a detailed index with basic information for each section.",
         "Include an introduction, learning objectives, 4-5 main modules with 3-5 subtopics each, and a conclusion.",
-        "For each concept or topic, provide a brief explanation followed by a relevant source link.",
+        "For each concept or topic, provide a brief explanation followed by a relevant youtube source link to learn.",
         "Ensure the content is substantial, informative, and well-organized, resembling a full course page.",
         "Use markdown formatting to structure the document clearly."
     ]
