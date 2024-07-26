@@ -19,83 +19,159 @@ def search_sources(topic, max_results=5):
             st.error(f"Error during search: {str(e)}")
             return []
 
+def hero_section():
+    st.markdown("""
+    <style>
+    .hero {
+        padding: 3rem;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .hero h1 {
+        color: #1e3d59;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    .hero p {
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    </style>
+    
+    <div class="hero">
+        <h1>AI Course Generator</h1>
+        <p>Transform any topic into a comprehensive, engaging course outline with just a few clicks!</p>
+    </div>
+    """, unsafe_allow_html=True)
+
 def generate_course(topic, search_results):
     description = "You are an experienced educator tasked with creating a comprehensive course outline on the given topic."
     instructions = [
         "Create an engaging and informative course outline based on the provided topic and search results.",
         "The course should be structured like a detailed index with basic information for each section.",
         "Include an introduction, learning objectives, 4-5 main modules with 3-5 subtopics each, and a conclusion.",
-        "For each concept or topic, provide a brief explanation followed by a google search links with relavency of learning.",
+        "For each concept or topic, provide a brief explanation followed by a relevant YouTube source link to learn.",
         "Ensure the content is substantial, informative, and well-organized, resembling a full course page.",
-        "Use markdown formatting to structure the document clearly."
+        "Use markdown formatting to structure the document clearly and try rendering formulaes in md."
     ]
     course_format = """
-# Comprehensive Course: {topic}
+# {topic}
 
 ## Course Overview
-[Provide a 2-3 paragraph overview of the course, its importance, and what students will gain from it.]
+[Provide a paragraph overview of the course, its importance, and what students will gain from it.]
 
 ## Course Outline
 
 ### Module 1: [Module Title]
-[Brief overview of the module - 2-3 sentences]
+Explain overview of the module - 2-3 sentences
 
 #### 1.1 [Subtopic 1]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 1.2 [Subtopic 2]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 1.3 [Subtopic 3]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 ### Module 2: [Module Title]
-[Brief overview of the module - 2-3 sentences]
+Explain overview of the module - 2-3 sentences
 
 #### 2.1 [Subtopic 1]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 2.2 [Subtopic 2]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 2.3 [Subtopic 3]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 ### Module 3: [Module Title]
-[Brief overview of the module - 2-3 sentences]
+Explain overview of the module - 2-3 sentences
 
 #### 3.1 [Subtopic 1]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 3.2 [Subtopic 2]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 3.3 [Subtopic 3]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 ### Module 4: [Module Title]
-[Brief overview of the module - 2-3 sentences]
+Explain overview of the module - 2-3 sentences
 
 #### 4.1 [Subtopic 1]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 4.2 [Subtopic 2]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 #### 4.3 [Subtopic 3]
-[2-3 sentence explanation of the subtopic]
-**Reference:** [Source Title](link)
+- Point 1: [2-3 sentence explanation of the subtopic]
+- Point 2: [2-3 sentence explanation of the subtopic]
+- Point 3: [2-3 sentence explanation of the subtopic]
+- Point 4:**Formula:** [Insert any relevant formula here if applicable]
+- Point 5:**Reference:** [Source Title](link)
+- Point 6:**YouTube Link:** [Watch on YouTube](https://www.youtube.com/results?search_query={Subtopic+1+YouTube})
 
 ## Additional Resources
 - [Resource 1]: [Brief description] - [Link]
@@ -118,7 +194,7 @@ def generate_course(topic, search_results):
         return None
 
 def main():
-    st.title(":book: AI Course Generator")
+    hero_section()
     input_topic = st.text_input("Enter a course topic")
     generate_course_btn = st.button("Generate Course")
 
