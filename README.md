@@ -67,8 +67,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 Got questions? Want to chat? Find me on:
-- Twitter: [@your_twitter_handle](https://twitter.com/bharathajjarapu) 🐦
-- LinkedIn: [Your Name](https://www.linkedin.com/in/bharathajjarapu/) 💼
+- Twitter: [@bharathajjarapu](https://twitter.com/bharathajjarapu) 🐦
+- LinkedIn: [Bharath Ajjarapu](https://www.linkedin.com/in/bharathajjarapu/) 💼
 - Email: bharathajjarapu@duck.com 📧
 
 Happy course generating! May your learning never stop and your coffee never run out! ☕️📚🚀
