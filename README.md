@@ -1,6 +1,6 @@
 # 🚀 AI Course Generator 📚
 
-Hey there, fellow code warriors! 👋 Welcome to my super cool AI Course Generator project! This bad boy uses the power of AI to create awesome course outlines on pretty much any topic you can think of. It's like having a genius professor in your pocket! 🧠💼
+Welcome to my super cool AI Course Generator project! This bad boy uses the power of AI to create awesome course outlines on pretty much any topic you can think of. It's like having a genius professor in your pocket! 🧠💼
 
 ## 🌟 Features
 
